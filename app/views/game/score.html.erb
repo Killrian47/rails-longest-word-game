@@ -1,0 +1,19 @@
+<h1>Result</h1>
+
+<div class="container">
+
+  <% if @error != nil %>
+  <div class="alert alert-danger">
+    <p class="m-0"><%= @error %></p>
+  </div>
+  <% end %>
+
+  <% if @score != nil %>
+  <div>
+    <h2>Congratulations!</h2>
+    <p class="mb-0 mt-3">You have <%= @score %> points.</p>
+  </div>
+  <% end %>
+
+  <%= link_to "Play again", new_path %>
+</div>
